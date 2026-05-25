@@ -81,9 +81,9 @@ streamlit run app.py
 
 Example:
 
-```markdown
-![App Screenshots](screenshots/app1.png)
-```
+![App Screenshot](Screenshots/app1.png)
+
+![App Screenshot](Screenshots/app2.png)
 
 ---
 
