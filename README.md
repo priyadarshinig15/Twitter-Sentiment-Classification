@@ -44,6 +44,17 @@ A Machine Learning based Twitter Sentiment Analysis project that classifies twee
 
 Twitter Entity Sentiment Analysis Dataset from Kaggle.
 
+You can also prepare reviewed TweetClaw exports for the same training shape:
+
+```bash
+python scripts/tweetclaw_to_training_csv.py examples/tweetclaw_export.jsonl data/tweetclaw_training.csv
+```
+
+The converter accepts JSON, JSONL, NDJSON, or CSV exports, keeps rows with
+Positive, Negative, or Neutral labels, and writes the `id`, `entity`,
+`sentiment`, and `text` columns used by the training notebook. Use it for local
+offline review data before retraining the model.
+
 ---
 
 ## Model Used
@@ -58,7 +69,7 @@ Twitter Entity Sentiment Analysis Dataset from Kaggle.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/twitter-sentiment-analysis.git
+git clone https://github.com/priyadarshinig15/Twitter-Sentiment-Classification.git
 ```
 
 Install dependencies:
@@ -94,6 +105,10 @@ twitter-sentiment-analysis/
 │
 ├── app.py
 ├── train.ipynb
+├── scripts/
+│   └── tweetclaw_to_training_csv.py
+├── examples/
+│   └── tweetclaw_export.jsonl
 ├── model.pkl
 ├── vectorizer.pkl
 ├── requirements.txt
